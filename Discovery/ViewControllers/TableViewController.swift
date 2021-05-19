@@ -11,6 +11,9 @@ var items = ["책 구매", "약속", "스터디 준비"]
 
 class TableViewController: UITableViewController {
 
+    // Outlet 변수 추가
+    @IBOutlet var tvListView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -40,8 +43,24 @@ class TableViewController: UITableViewController {
         cell.textLabel?.text = items[(indexPath as NSIndexPath).row] // items를 대입.
 
         // Configure the cell...
-
+        
+        // TODO: Figure out how to customize cells
+        shadowAndBorderForCell(yourTableViewCell: cell)
         return cell
+    }
+    
+    func shadowAndBorderForCell(yourTableViewCell : UITableViewCell){
+        // SHADOW AND BORDER FOR CELL
+        //yourTableViewCell.contentView.layer.cornerRadius = 5
+        yourTableViewCell.contentView.layer.borderWidth = 1.0
+        yourTableViewCell.contentView.layer.borderColor = UIColor.lightGray.cgColor
+        yourTableViewCell.contentView.layer.masksToBounds = true
+        yourTableViewCell.layer.shadowColor = UIColor.gray.cgColor
+        yourTableViewCell.layer.shadowOffset = CGSize(width: 0, height: 2.0)
+        yourTableViewCell.layer.shadowRadius = 2.0
+        yourTableViewCell.layer.shadowOpacity = 1.0
+        yourTableViewCell.layer.masksToBounds = false
+        yourTableViewCell.layer.shadowPath = UIBezierPath(roundedRect:yourTableViewCell.bounds, cornerRadius:yourTableViewCell.contentView.layer.cornerRadius).cgPath
     }
     
 

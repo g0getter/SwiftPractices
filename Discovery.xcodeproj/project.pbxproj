@@ -14,7 +14,6 @@
 		BB479E5926522713007F01D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB479E5826522713007F01D9 /* Assets.xcassets */; };
 		BB479E5C26522713007F01D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB479E5A26522713007F01D9 /* LaunchScreen.storyboard */; };
 		BB4847D92653414000468BA5 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4847D82653414000468BA5 /* TableViewController.swift */; };
-		BB4847E12653560B00468BA5 /* DailyScrum.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4847E02653560B00468BA5 /* DailyScrum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +26,6 @@
 		BB479E5B26522713007F01D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB479E5D26522713007F01D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB4847D82653414000468BA5 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		BB4847E02653560B00468BA5 /* DailyScrum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyScrum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				BB4847D82653414000468BA5 /* TableViewController.swift */,
-				BB4847E02653560B00468BA5 /* DailyScrum.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -151,7 +148,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB4847E12653560B00468BA5 /* DailyScrum.swift in Sources */,
 				BB479E4D2652270B007F01D9 /* AppDelegate.swift in Sources */,
 				BB479E572652270B007F01D9 /* Discovery.xcdatamodeld in Sources */,
 				BB479E4F2652270B007F01D9 /* SceneDelegate.swift in Sources */,
