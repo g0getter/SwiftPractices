@@ -12,6 +12,6 @@ class CustomCell: UITableViewCell {
     @IBOutlet weak var discoveryImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var detailsLabel: UILabel!
-    
+    @IBOutlet weak var switchButton: UISwitch!
     
 }

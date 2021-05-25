@@ -7,10 +7,9 @@
 
 import UIKit
 
-var items = ["똑똑한 투자 방법에는 \n무엇이 있을까?", "자산배분 어떻게 하는게\nBest 일까", "자녀에게 주식 증여하여\n투자하는 법"]
-var details = ["주린이를 위한 실전 꿀팁", "2021 전망 글로벌\n자산 배분 5대 키워드", "미성년 자녀에게\n똑똑하게 주식 증여하기"]
-//var images = ["iosDiscoveryCardSmall01@3x.png", "iosDiscoveryCardSmall02@3x.png", "iosDiscoveryCardSmall03@3x.png"]
-var images = ["image1.png", "image2.png", "image3.png"]
+var items = ["똑똑한 투자 방법에는 \n무엇이 있을까?", "자산배분 어떻게 하는게\nBest 일까", "자녀에게 주식 증여하여\n투자하는 법", "똑똑한 투자 방법에는 \n무엇이 있을까?", "자산배분 어떻게 하는게\nBest 일까", "자녀에게 주식 증여하여\n투자하는 법"]
+var details = ["주린이를 위한 실전 꿀팁", "2021 전망 글로벌\n자산 배분 5대 키워드", "미성년 자녀에게\n똑똑하게 주식 증여하기", "주린이를 위한 실전 꿀팁", "2021 전망 글로벌\n자산 배분 5대 키워드", "미성년 자녀에게\n똑똑하게 주식 증여하기"]
+var images = ["iosDiscoveryCardSmall01.png", "iosDiscoveryCardSmall02.png", "iosDiscoveryCardSmall03.png", "iosDiscoveryCardSmall01.png", "iosDiscoveryCardSmall02.png", "iosDiscoveryCardSmall03.png"]
 
 
 class TableViewController: UITableViewController {
@@ -54,10 +53,13 @@ class TableViewController: UITableViewController {
         cell.titleLabel?.text =  items[(indexPath as NSIndexPath).row]
         cell.detailsLabel?.text = details[(indexPath as NSIndexPath).row]
         cell.discoveryImage?.image = UIImage(named: images[(indexPath as NSIndexPath).row])
+        cell.switchButton?.isOn = true
         
-        // Configure the cell...
+//        // decelerationRate - 속도 조절 .normal OR .fast
+//        tableView.decelerationRate = .init(rawValue: 0.8)
+//        print(tableView.decelerationRate.rawValue)
         
-        // TODO: Figure out how to customize cells
+        
         tableView.heightAnchor.constraint(equalToConstant: tableView.contentSize.height).isActive = true
         return cell
     }
