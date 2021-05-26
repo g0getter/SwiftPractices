@@ -48,8 +48,7 @@ class TableViewController: UITableViewController {
         if(indexPath.row == 0) {
             cell.switchButton?.isOn = false
         } else {
-            // 이 부분 없으면 재사용 셀 중 일부는 Switch Off로 출력됨.
-            cell.switchButton?.isOn = true
+//            cell.switchButton?.isOn = true // prepareForReuse()하면 필요 없음.
         }
         
         //        // decelerationRate - 속도 조절 .normal OR .fast
@@ -59,7 +58,6 @@ class TableViewController: UITableViewController {
         tableView.heightAnchor.constraint(equalToConstant: tableView.contentSize.height).isActive = true
         return cell
     }
-    
 }
 
 

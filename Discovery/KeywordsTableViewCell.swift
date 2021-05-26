@@ -11,4 +11,11 @@ class KeywordsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var keywordImage: UIImageView!
     @IBOutlet weak var keywordImageLabel: UIImageView!
+    
+    // 재사용 준비
+//    override func prepareForReuse() {
+//        super.prepareForReuse()
+//
+//        self.accessoryType = .none
+//    }
 }
