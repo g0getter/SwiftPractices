@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BB0E3D43265B661C00914A77 /* MultipleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0E3D42265B661C00914A77 /* MultipleTableViewController.swift */; };
+		BB261FF4265E0204001B2461 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB261FF3265E0204001B2461 /* DetailViewController.swift */; };
 		BB479E4D2652270B007F01D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB479E4C2652270B007F01D9 /* AppDelegate.swift */; };
 		BB479E4F2652270B007F01D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB479E4E2652270B007F01D9 /* SceneDelegate.swift */; };
 		BB479E542652270B007F01D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB479E522652270B007F01D9 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		BB0E3D42265B661C00914A77 /* MultipleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleTableViewController.swift; sourceTree = "<group>"; };
+		BB261FF3265E0204001B2461 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		BB479E492652270B007F01D9 /* Discovery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Discovery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB479E4C2652270B007F01D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB479E4E2652270B007F01D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 			children = (
 				BB4847D82653414000468BA5 /* TableViewController.swift */,
 				BBE10874265A9B6000E3A1E9 /* KeywordsTableViewController.swift */,
+				BB261FF3265E0204001B2461 /* DetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB261FF4265E0204001B2461 /* DetailViewController.swift in Sources */,
 				BBE10878265A9D2A00E3A1E9 /* KeywordsTableViewCell.swift in Sources */,
 				BB479E4D2652270B007F01D9 /* AppDelegate.swift in Sources */,
 				BBE10875265A9B6000E3A1E9 /* KeywordsTableViewController.swift in Sources */,

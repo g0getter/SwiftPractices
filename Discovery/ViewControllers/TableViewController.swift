@@ -35,6 +35,7 @@ class TableViewController: UITableViewController {
         return items.count
     }
     
+    
     // 구체적인 하나의 row(cell) 반환. cell 안에 데이터 넣음.
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
   
