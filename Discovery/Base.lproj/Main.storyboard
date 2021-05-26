@@ -77,11 +77,7 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Main View" id="vlf-6N-Cnv">
-                        <barButtonItem key="leftBarButtonItem" title="2 types" id="wb0-Bb-Xho">
-                            <connections>
-                                <segue destination="T46-vh-pfO" kind="show" id="KfL-Tz-70z"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="backBarButtonItem" title=" " id="FvG-Zr-1aF"/>
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="biH-07-wC3">
                                 <connections>
@@ -283,35 +279,67 @@
             </objects>
             <point key="canvasLocation" x="1025" y="441"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="hqH-dt-Ky2">
             <objects>
-                <viewController id="qen-sc-NlV" sceneMemberID="viewController">
+                <viewController id="qen-sc-NlV" customClass="DetailViewController" customModule="Discovery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PHh-gR-CfX">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Il-sG-Qq5">
-                                <rect key="frame" x="0.0" y="102" width="390" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <items>
-                                    <navigationItem title="Title" id="Srs-Mf-M7g">
-                                        <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" id="rlD-2W-2eD"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gy5-LN-n9a">
+                                <rect key="frame" x="16" y="88" width="358" height="673"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wz4-AQ-XBS" userLabel="contentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="673"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5zD-PR-IlX">
+                                                <rect key="frame" x="0.0" y="0.0" width="390" height="673"/>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="5zD-PR-IlX" firstAttribute="leading" secondItem="Wz4-AQ-XBS" secondAttribute="leading" id="4bq-Mb-69S"/>
+                                            <constraint firstItem="5zD-PR-IlX" firstAttribute="top" secondItem="Wz4-AQ-XBS" secondAttribute="top" id="Pff-NC-uCJ"/>
+                                            <constraint firstAttribute="height" priority="250" constant="673" id="Uag-R1-A95"/>
+                                            <constraint firstAttribute="trailing" secondItem="5zD-PR-IlX" secondAttribute="trailing" id="jtN-j3-guM"/>
+                                            <constraint firstAttribute="bottom" secondItem="5zD-PR-IlX" secondAttribute="bottom" id="oCg-o7-Blh"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Wz4-AQ-XBS" firstAttribute="bottom" secondItem="PRM-63-DAn" secondAttribute="bottom" constant="673" id="BN4-se-Q9X"/>
+                                    <constraint firstItem="Wz4-AQ-XBS" firstAttribute="leading" secondItem="PRM-63-DAn" secondAttribute="leading" id="Nnp-zK-oSa"/>
+                                    <constraint firstItem="Wz4-AQ-XBS" firstAttribute="width" secondItem="7wq-hk-dgk" secondAttribute="width" multiplier="1.08939" id="SUv-Kx-1SR"/>
+                                    <constraint firstItem="Wz4-AQ-XBS" firstAttribute="top" secondItem="PRM-63-DAn" secondAttribute="top" id="hrx-sb-nNS"/>
+                                    <constraint firstItem="Wz4-AQ-XBS" firstAttribute="trailing" secondItem="PRM-63-DAn" secondAttribute="trailing" constant="390" id="jxA-2p-9Sm"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="PRM-63-DAn"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="7wq-hk-dgk"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LIM-GQ-r7N"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gy5-LN-n9a" firstAttribute="top" secondItem="PHh-gR-CfX" secondAttribute="topMargin" id="SYZ-S0-hNx"/>
+                            <constraint firstItem="gy5-LN-n9a" firstAttribute="leading" secondItem="PHh-gR-CfX" secondAttribute="leadingMargin" id="dkD-dL-xoz"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="gy5-LN-n9a" secondAttribute="bottom" id="fox-6W-QOU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gy5-LN-n9a" secondAttribute="trailing" id="lUC-oS-P1A"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="m4c-su-HXD">
-                        <barButtonItem key="rightBarButtonItem" title="Deeper" id="Zpj-cT-ouk">
-                            <connections>
-                                <segue destination="hjW-uP-PvY" kind="show" id="9Vz-X5-OCf"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Deeper" id="Zpj-cT-ouk">
+                                <connections>
+                                    <segue destination="hjW-uP-PvY" kind="show" id="9Vz-X5-OCf"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="square.and.arrow.up" catalog="system" id="QcJ-uc-OaH"/>
+                        </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="verticalStackView" destination="5zD-PR-IlX" id="aUb-3f-RSB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2bA-rN-Puo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -366,8 +394,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="iosDiscoveryCardSmall03" width="375" height="194"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

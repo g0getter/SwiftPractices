@@ -19,7 +19,6 @@ class CustomCell: UITableViewCell {
         super.prepareForReuse()
         
         // 화면 변하기 전 모습 보여주지 않기 위해 미리 초기화 필요
-        self.switchButton.isOn = true
-        
+        self.switchButton.isOn = true        
     }
 }
