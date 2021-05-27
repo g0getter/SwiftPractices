@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4CECB85FF1398C5DA4F534E1 /* Pods_Discovery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA20A37BE86A72850431CA7 /* Pods_Discovery.framework */; };
 		BB0E3D43265B661C00914A77 /* MultipleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0E3D42265B661C00914A77 /* MultipleTableViewController.swift */; };
 		BB261FF4265E0204001B2461 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB261FF3265E0204001B2461 /* DetailViewController.swift */; };
 		BB479E4D2652270B007F01D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB479E4C2652270B007F01D9 /* AppDelegate.swift */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B9C6ECE04E26AED56B976C0 /* Pods-Discovery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Discovery.release.xcconfig"; path = "Target Support Files/Pods-Discovery/Pods-Discovery.release.xcconfig"; sourceTree = "<group>"; };
+		727000503BD1F7B0E20101D6 /* Pods-Discovery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Discovery.debug.xcconfig"; path = "Target Support Files/Pods-Discovery/Pods-Discovery.debug.xcconfig"; sourceTree = "<group>"; };
 		BB0E3D42265B661C00914A77 /* MultipleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleTableViewController.swift; sourceTree = "<group>"; };
 		BB261FF3265E0204001B2461 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		BB479E492652270B007F01D9 /* Discovery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Discovery.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +39,7 @@
 		BB6FF5392655F67D004368B2 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomCell.swift; path = ViewControllers/CustomCell.swift; sourceTree = "<group>"; };
 		BBE10874265A9B6000E3A1E9 /* KeywordsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordsTableViewController.swift; sourceTree = "<group>"; };
 		BBE10877265A9D2A00E3A1E9 /* KeywordsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordsTableViewCell.swift; sourceTree = "<group>"; };
+		DAA20A37BE86A72850431CA7 /* Pods_Discovery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Discovery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +47,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CECB85FF1398C5DA4F534E1 /* Pods_Discovery.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C099CF60F8DEDF8B976597E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				727000503BD1F7B0E20101D6 /* Pods-Discovery.debug.xcconfig */,
+				1B9C6ECE04E26AED56B976C0 /* Pods-Discovery.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		83A9ABCB2014CD18E99EC748 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DAA20A37BE86A72850431CA7 /* Pods_Discovery.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BB479E402652270B007F01D9 = {
 			isa = PBXGroup;
 			children = (
 				BB479E4B2652270B007F01D9 /* Discovery */,
 				BB479E4A2652270B007F01D9 /* Products */,
+				4C099CF60F8DEDF8B976597E /* Pods */,
+				83A9ABCB2014CD18E99EC748 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,9 +124,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BB479E6026522713007F01D9 /* Build configuration list for PBXNativeTarget "Discovery" */;
 			buildPhases = (
+				EC33447806B0B05D81D73499 /* [CP] Check Pods Manifest.lock */,
 				BB479E452652270B007F01D9 /* Sources */,
 				BB479E462652270B007F01D9 /* Frameworks */,
 				BB479E472652270B007F01D9 /* Resources */,
+				BBA97C2E265F52990055CB7B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -157,6 +183,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BBA97C2E265F52990055CB7B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n${PODS_ROOT}/SwiftLint/swiftlint autocorrect\n";
+		};
+		EC33447806B0B05D81D73499 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Discovery-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BB479E452652270B007F01D9 /* Sources */ = {
@@ -232,8 +300,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -293,6 +363,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -315,6 +386,7 @@
 		};
 		BB479E6126522713007F01D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 727000503BD1F7B0E20101D6 /* Pods-Discovery.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -334,6 +406,7 @@
 		};
 		BB479E6226522713007F01D9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B9C6ECE04E26AED56B976C0 /* Pods-Discovery.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
