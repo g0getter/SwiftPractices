@@ -12,7 +12,7 @@ var keywordImageLabels = ["text1.png", "text2.png"]
 
 class KeywordsTableViewController: UITableViewController {
     @IBOutlet var tvListView: UITableView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -42,11 +42,10 @@ class KeywordsTableViewController: UITableViewController {
 
         cell.keywordImage?.image = UIImage(named: keywordImages[(indexPath as NSIndexPath).row])
         cell.keywordImageLabel?.image = UIImage(named: keywordImageLabels[(indexPath as NSIndexPath).row])
-        
 
         return cell
     }
-    
+
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
