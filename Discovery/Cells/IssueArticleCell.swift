@@ -5,9 +5,9 @@
 //  Created by 여나경 on 2021/06/03.
 //
 
-import UIKit
+ import UIKit
 
-class IssueArticleCell: UITableViewCell {
+ class IssueArticleCell: UITableViewCell {
 
     static let identifier = "issueArticleCell"
 
@@ -71,4 +71,4 @@ class IssueArticleCell: UITableViewCell {
     override class func awakeFromNib() {
         super.awakeFromNib()
     }
-}
+ }

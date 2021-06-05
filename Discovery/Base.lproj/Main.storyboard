@@ -78,11 +78,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Main View" id="vlf-6N-Cnv">
                         <barButtonItem key="backBarButtonItem" title=" " id="FvG-Zr-1aF"/>
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="MJq-JW-Pl1">
-                            <connections>
-                                <segue destination="Dd9-qx-ovi" kind="show" id="bvv-xK-Oh1"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="MJq-JW-Pl1"/>
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="biH-07-wC3">
                                 <connections>
