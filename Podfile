@@ -7,5 +7,5 @@ target 'Discovery' do
 
   # Pods for Discovery
   pod 'SwiftLint'
-
+  pod 'SnapKit'
 end
