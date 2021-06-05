@@ -7,7 +7,7 @@
 
 import UIKit
 
-var keywordImages = ["img_discovery_keyword_01.png", "img_discovery_keyword_02.png"]
+var keywordImages = ["imgDiscoveryKeyword01.png", "imgDiscoveryKeyword02.png", "imgDiscoveryKeyword03.png", "imgDiscoveryKeyword04.png", "imgDiscoveryKeyword05.png", "imgDiscoveryKeyword06.png", "imgDiscoveryKeyword07.png"]
 var keywordImageLabels = ["text1.png", "text2.png"]
 
 class KeywordsTableViewController: UITableViewController {
@@ -33,7 +33,7 @@ class KeywordsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return keywordImages.count
+        return keywordImageLabels.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
