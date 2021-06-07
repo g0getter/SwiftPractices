@@ -24,16 +24,16 @@ struct IssueContent: Base {
 }
 
 let issues: [Base] = [
-//    TodaysIssues(issues: [
-//        TodaysIssue(title: "현대차"),
-//        TodaysIssue(title: "삼성카드"),
-//        TodaysIssue(title: "현대차"),
-//        TodaysIssue(title: "현대차"),
-//        TodaysIssue(title: "현대차"),
-//        TodaysIssue(title: "현대차"),
-//        TodaysIssue(title: "현대차"),
-//        TodaysIssue(title: "현대차")
-//    ]),
+    TodaysIssues(issues: [
+        TodaysIssue(title: "현대차"),
+        TodaysIssue(title: "삼성카드"),
+        TodaysIssue(title: "현대차"),
+        TodaysIssue(title: "현대차"),
+        TodaysIssue(title: "현대차"),
+        TodaysIssue(title: "현대차"),
+        TodaysIssue(title: "현대차"),
+        TodaysIssue(title: "현대차")
+    ]),
     IssueContent(title: "title", image: "img_discovery_issue_01.png"),
     IssueContent(title: "title", image: "img_discovery_issue_01.png"),
     IssueContent(title: "title", image: "img_discovery_issue_01.png"),
@@ -43,9 +43,6 @@ let issues: [Base] = [
     IssueContent(title: "title", image: "img_discovery_issue_01.png"),
     IssueContent(title: "title", image: "img_discovery_issue_01.png")
 ]
-
-// var issues = ["월클 올라선 넥쏘,글로벌 수소차 80% 장악", "아이오닉5 초대박인데…반기지 못하는 사람들"]
-// var issueImages = ["img_discovery_issue_01.png", "img_discovery_issue_02.png"]
 
 class TodayIssueTableViewController: UITableViewController {
 
@@ -79,6 +76,7 @@ class TodayIssueTableViewController: UITableViewController {
     override func viewWillDisappear(_ animated: Bool) {
         // TODO: 배경 이미지/색 다시 살리는 방법
         //        self.navigationController?.navigationBar.shadowImage = UIImage()
+
         // 경계 살리기
         self.navigationController?.navigationBar.clipsToBounds = false
         self.navigationController?.navigationBar.tintColor = .none
@@ -98,23 +96,25 @@ class TodayIssueTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let cell = issueTableView.dequeueReusableCell(withIdentifier: "issueArticleCell", for: indexPath) as! IssueArticleCell
+//        var cell = issueTableView.dequeueReusableCell(withIdentifier: "issueArticleCell", for: indexPath)
 
         // issues 형식 따라 경우 나눠서 casting
         // TODO: Casting 방식. 강제 캐스팅?
-//        if issues[(indexPath as NSIndexPath).row] is TodaysIssue {
-////            let cell = tableView.dequeueReusableCell(withIdentifier: "issueKeywordCell", for: indexPath) as! IssueKeywordCell
-//            cell = tableView.dequeueReusableCell(withIdentifier: "issueArticleCell", for: indexPath) as! IssueArticleCell
-//
-//
-//            return cell
-//
-//        } else if issues[(indexPath as NSIndexPath).row] is IssueContent {
-//            cell = tableView.dequeueReusableCell(withIdentifier: "issueArticleCell", for: indexPath) as! IssueArticleCell
-//            return cell
-//        }
+        if issues[(indexPath as NSIndexPath).row] as? TodaysIssues != nil {
+            let cell = issueTableView.dequeueReusableCell(withIdentifier: "issueKeywordCells", for: indexPath) as! IssueKeywordCells
+//            cell = cell as! IssueKeywordCells
+            return cell
 
-        return cell
+        } else if issues[(indexPath as NSIndexPath).row] as? IssueContent != nil {
+            let cell = issueTableView.dequeueReusableCell(withIdentifier: "issueArticleCell", for: indexPath) as! IssueArticleCell
+//            cell = cell as! IssueArticleCell
+            return cell
+        } else { // 무의미
+            let cell = issueTableView.dequeueReusableCell(withIdentifier: "issueArticleCell", for: indexPath) as! IssueArticleCell
+            //            cell = cell as! IssueArticleCell
+
+            return cell
+        }
 
     }
 
@@ -125,7 +125,7 @@ class TodayIssueTableViewController: UITableViewController {
     func registerCells() {
         issueTableView.register(IssueArticleCell.self, forCellReuseIdentifier: "issueArticleCell")
 
-//        issueTableView.register(KeywordCell.self, forCellReuseIdentifier: "keywordCell")
+        issueTableView.register(IssueKeywordCells.self, forCellReuseIdentifier: "issueKeywordCells")
 
         self.view.addSubview(issueTableView)
     }
