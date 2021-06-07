@@ -1,32 +1,16 @@
 //
-//  IssueKeywordTableViewCell.swift
+//  IssueKeywordCell.swift
 //  Discovery
 //
-//  Created by 여나경 on 2021/06/03.
+//  Created by 여나경 on 2021/06/07.
 //
 
 import UIKit
 
-class IssueKeywordCell: UITableViewCell {
+/// Keyword cell 하나
+///
+/// e.g. *"현대차"*
+class IssueKeywordCell: UICollectionViewCell {
     static let identifier = "issueKeywordCell"
-
-    let keywordTitle: [String] = {
-        return ["현대차", "삼성카드", "카카오", "SK하이닉스"]
-    }()
-
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        initContent()
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
-    func initContent() {
-        // CollectionView 생성
-
-//        contentView.addSubview(/*collectionView*/)
-    }
 
 }
