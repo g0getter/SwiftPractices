@@ -44,10 +44,30 @@ let issues: [Base] = [
     IssueContent(title: "title", image: "img_discovery_issue_01.png")
 ]
 
-class TodayIssueTableViewController: UITableViewController {
+class TodayIssueTableViewController: UITableViewController/*, UICollectionViewDelegate, UICollectionViewDataSource */{
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        <#code#>
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        <#code#>
+//    }
+//
 
     // Q. 새로 선언하는 tableView와 기본 tableView의 차이?
     var issueTableView: UITableView!
+
+    let collectionView: UICollectionView = {
+        let view = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+
+        view.backgroundColor = .white
+        view.contentInset = UIEdgeInsets.init(top: 0, left: 20, bottom: 0, right: 0)
+        view.showsHorizontalScrollIndicator = false
+        view.collectionViewLayout = layout
+        return view
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,11 +79,17 @@ class TodayIssueTableViewController: UITableViewController {
 
         issueTableView.estimatedRowHeight = 50
         issueTableView.rowHeight = UITableView.automaticDimension
-
+//        setupCollectionView()
         // 투명하지 않게 설정
 //        self.navigationController?.navigationBar.isTranslucent = false // 왜 노치 양쪽 화면 사라지는지? (Safe Area)
 
     }
+
+//    private func setupCollectionView() {
+//            collectionView.delegate = self
+//            collectionView.dataSource = self
+//        collectionView.register(IssueKeywordCell.self, forCellWithReuseIdentifier: IssueKeywordCell.identifier)
+//        }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
