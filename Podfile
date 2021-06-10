@@ -8,4 +8,6 @@ target 'Discovery' do
   # Pods for Discovery
   pod 'SwiftLint'
   pod 'SnapKit'
+  pod 'Moya/RxSwift'
+#  pod 'RxSwift'
 end
