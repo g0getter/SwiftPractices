@@ -512,19 +512,35 @@
                     <navigationItem key="navigationItem" title="오늘의 경제 이슈" id="nCP-Km-3eu">
                         <barButtonItem key="rightBarButtonItem" title="일반 View" id="FEx-Ph-AcX">
                             <connections>
-                                <segue destination="IvF-35-mHB" kind="show" id="1Qq-0v-XPQ"/>
+                                <segue destination="0x3-OB-jKs" kind="show" id="gq2-ty-gpT"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="omE-M9-p1q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1024.6153846153845" y="-1018.0094786729858"/>
+            <point key="canvasLocation" x="271" y="-1023"/>
         </scene>
-        <!--Issue Collection View Controller-->
+        <!--Marvel View Controller-->
+        <scene sceneID="AK5-F9-1Od">
+            <objects>
+                <viewController id="0x3-OB-jKs" customClass="MarvelViewController" customModule="Discovery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Djk-sh-zDs">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="7jT-zM-pGP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6nS-Iq-2EY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7hT-ah-NgC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1025" y="-1035"/>
+        </scene>
+        <!--Marvel Collection View Controller-->
         <scene sceneID="rvb-YR-KcA">
             <objects>
-                <collectionViewController id="IvF-35-mHB" customClass="IssueCollectionViewController" customModule="Discovery" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="IvF-35-mHB" customClass="MarvelCollectionViewController" customModule="Discovery" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Nki-bt-a95">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

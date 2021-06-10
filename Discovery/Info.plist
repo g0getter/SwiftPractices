@@ -62,5 +62,23 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key> NSAppTransportSecurity </key>
+	<dict>
+		<key> NSExceptionDomains </key>
+		<dict>
+			<key>http://marvel.com</key>
+			<dict>
+				<key> NSTemporaryExceptionAllowsInsecureHTTPLoads </key>
+				<true/>
+			</dict>
+			<key>https://*.marvel.com</key>
+			<dict>
+				<key> NSTemporaryExceptionAllowsInsecureHTTPLoads </key>
+				<false/>
+			</dict>
+		</dict>
+	</dict>
+	<key>NSExceptionAllowsInsecureHTTPLoads</key>
+	<true/>
 </dict>
 </plist>
