@@ -9,12 +9,12 @@ import CryptoKit
 import CommonCrypto
 
 public enum Marvel {
-    // 1
     static private let publicKey = "3c4dcb91653adab861890dee461e955f"
     static private let privateKey = "f0e43ec4a198e99634388c129739ca605ac217b9"
 
-    // 2
     case comics
+
+    case characters
 
     case none
 
@@ -33,6 +33,7 @@ extension Marvel: TargetType {
         switch self {
         case .comics: return "/comics"
         case .none: return ""
+        case .characters: return "/characters?limit=2" // 캐릭터 2명만 받음
         }
     }
 
@@ -40,7 +41,9 @@ extension Marvel: TargetType {
     public var method: Moya.Method {
         switch self {
         case .comics: return .get
-        case .none: return .get // Not post
+        case .characters: return .get
+//        case .none: return .get // Not post
+        default: return .get
         }
     }
 

@@ -20,6 +20,7 @@ class MarvelViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    /// Sends request, receives and parses response.
     func sendRequest() {
 
         let provider = MoyaProvider<Marvel>()
@@ -29,6 +30,14 @@ class MarvelViewController: UIViewController {
                 switch event {
                 case .success(let response):
                     print(response)
+                    // TODO: Parse response
+                    print(response.data)
+                    do {
+                        let results = try JSONDecoder().decode(Character.self, from: response.data)
+
+                    } catch let err {
+                        print(err)
+                    }
                 case .error(let error):
                     print(error.localizedDescription)
                 }
