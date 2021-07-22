@@ -39,7 +39,6 @@ class MarvelCollectionViewController: UICollectionViewController {
         }()
 
         // Register cell classes
-//        self.marvelView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "marvelCell")
         self.marvelView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "marvelCell")
         self.view.addSubview(marvelView)
 

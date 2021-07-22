@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="o4Z-dz-T5x">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="o4Z-dz-T5x">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -19,7 +19,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell" rowHeight="218.33332824707031" id="P1i-X8-1Nl" customClass="CustomCell" customModule="Discovery" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="390" height="218.33332824707031"/>
+                                <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="218.33332824707031"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="P1i-X8-1Nl" id="keX-nl-cgq">
                                     <rect key="frame" x="0.0" y="0.0" width="390" height="218.33332824707031"/>
@@ -132,7 +132,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell" rowHeight="218.33332824707031" id="i8B-Sm-hkJ" customClass="CustomCell" customModule="Discovery" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="390" height="218.33332824707031"/>
+                                <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="218.33332824707031"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="i8B-Sm-hkJ" id="DZ1-rH-OPJ">
                                     <rect key="frame" x="0.0" y="0.0" width="390" height="218.33332824707031"/>
@@ -177,7 +177,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="keywordsCell" id="P2V-ph-wZx" customClass="KeywordsTableViewCell" customModule="Discovery" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="246.33332824707031" width="390" height="98.333335876464844"/>
+                                <rect key="frame" x="0.0" y="242.66666221618652" width="390" height="98.333335876464844"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="P2V-ph-wZx" id="Mzm-ew-Zn9">
                                     <rect key="frame" x="0.0" y="0.0" width="390" height="98.333335876464844"/>
@@ -236,7 +236,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="keywordsCell" id="6Vh-qw-SMd" customClass="KeywordsTableViewCell" customModule="Discovery" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="390" height="98.333335876464844"/>
+                                <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="98.333335876464844"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Vh-qw-SMd" id="tN9-mE-mE5">
                                     <rect key="frame" x="0.0" y="0.0" width="390" height="98.333335876464844"/>
@@ -389,7 +389,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Wy0-Bh-qTa">
-                                <rect key="frame" x="0.0" y="28" width="390" height="43.666667938232422"/>
+                                <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wy0-Bh-qTa" id="D5K-9h-Tdd">
                                     <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
@@ -436,7 +436,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Dlq-w2-qnF">
-                                <rect key="frame" x="0.0" y="28" width="390" height="43.666667938232422"/>
+                                <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dlq-w2-qnF" id="ckh-AV-kNd">
                                     <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
@@ -465,7 +465,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="issueArticleCell" id="lwr-XO-kTD" customClass="IssueArticleCell" customModule="Discovery" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="390" height="43.666667938232422"/>
+                                <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lwr-XO-kTD" id="fdA-cI-Xjs">
                                     <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
@@ -473,7 +473,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="issueKeywordCells" rowHeight="68" id="sTr-AV-Nt1" userLabel="issueKeywordCells" customClass="IssueKeywordCells" customModule="Discovery" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="71.666667938232422" width="390" height="68"/>
+                                <rect key="frame" x="0.0" y="68.000001907348633" width="390" height="68"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sTr-AV-Nt1" id="5gY-OZ-qVE">
                                     <rect key="frame" x="0.0" y="0.0" width="390" height="68"/>
@@ -510,11 +510,14 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="오늘의 경제 이슈" id="nCP-Km-3eu">
-                        <barButtonItem key="rightBarButtonItem" title="일반 View" id="FEx-Ph-AcX">
-                            <connections>
-                                <segue destination="0x3-OB-jKs" kind="show" id="gq2-ty-gpT"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="일반 View" id="FEx-Ph-AcX">
+                                <connections>
+                                    <segue destination="0x3-OB-jKs" kind="show" id="gq2-ty-gpT"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="CollectionView" id="fTb-qX-5hC"/>
+                        </rightBarButtonItems>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="omE-M9-p1q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -535,7 +538,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7hT-ah-NgC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1025" y="-1035"/>
+            <point key="canvasLocation" x="1024.6153846153845" y="-1035.0710900473932"/>
         </scene>
         <!--Marvel Collection View Controller-->
         <scene sceneID="rvb-YR-KcA">
@@ -552,7 +555,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="oxZ-Jf-Kbg">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="oxZ-Jf-Kbg" customClass="MarvelCell" customModule="Discovery" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="KEP-wm-ZHk">
