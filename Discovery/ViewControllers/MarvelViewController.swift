@@ -10,6 +10,8 @@ import Moya
 import RxSwift
 
 // TODO: RxSwift로 비동기 처리 필요
+// ?1. 왜 self.view.backgroundColor를 지정해도 배경색이 안 바뀌는지
+// ?2. 뭐가 문제인지. URL image 링크? X. URL image 출력 방식? 혹은 동기/비동기 처리 부족?
 
  class MarvelViewController: UIViewController {
     var marvelCollectionView: UICollectionView?
@@ -23,8 +25,9 @@ import RxSwift
 
         self.sendRequest()
 
-//        let view = UIView()
-        self.view.backgroundColor = .white
+        let view = UIView()
+        view.backgroundColor = .white
+//        self.view.backgroundColor = .white
 
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
                layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
@@ -32,8 +35,10 @@ import RxSwift
 
         marvelCollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
 
+        self.view = view
+        self.view.backgroundColor = .white
         self.registerCells()
-//        self.view = view
+
 //        self.decodingTest()
 
     }
@@ -91,8 +96,8 @@ import RxSwift
      */
 
     func registerCells() {
-        // !!!!!!!MarvelCell.self를 등록해야 함
-        marvelCollectionView?.register(MarvelCell.self, forCellWithReuseIdentifier: "comicsCell")
+        // !!!!!!!ComicsCell.self를 등록해야 함
+        marvelCollectionView?.register(ComicsCell.self, forCellWithReuseIdentifier: "comicsCell")
         marvelCollectionView?.dataSource = self
 //        marvelCollectionView?.delegate = self
         self.view.addSubview(marvelCollectionView ?? UICollectionView())
@@ -102,17 +107,22 @@ import RxSwift
 
  extension MarvelViewController: UICollectionViewDataSource {
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            return comics.count
+//            return comics.count
+            return 3
         }
 
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "comicsCell", for: indexPath) as! ComicsCell
 
-            cell.backgroundColor = .blue
+//            cell.backgroundColor = .blue
 
             // 새로운 코드(thumbnail)
-            guard let url = URL(string: comics[indexPath.row].thumbnail.path) else {
-                return UICollectionViewCell() }
+//            guard let url = URL(string: comics[indexPath.row].thumbnail.path) else {
+//                return UICollectionViewCell()
+//            }
+            guard let url = URL(string: "https://file.mk.co.kr/meet/neds/2020/02/image_readtop_2020_108886_15807067014073327.jpg") else {
+                return UICollectionViewCell()
+            }
             let data = try? Data(contentsOf: url)
             cell.comicsImage.image = UIImage(data: data ?? Data())
 
